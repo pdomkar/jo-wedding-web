@@ -5,6 +5,20 @@
   }
 
   @font-face {
+      font-family: 'Affogato';
+      src:  url('../assets/fonts/Affogato-Medium.woff2') format('woff2'),
+            url('../assets/fonts/Affogato-Medium.woff') format('woff');
+            font-weight: 500;
+    }
+
+    @font-face {
+      font-family: 'Affogato';
+      src:  url('../assets/fonts/Affogato-Bold.woff2') format('woff2'),
+            url('../assets/fonts/Affogato-Bold.woff') format('woff');
+            font-weight: bold;
+    }
+
+  @font-face {
     font-family: 'Butler';
     src:  url('../assets/fonts/Butler_Regular.woff2') format('woff2'),
           url('../assets/fonts/Butler_Regular.woff') format('woff');

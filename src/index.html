@@ -9,8 +9,20 @@
 </head>
 
 <body>
+  <!-- <div class="headerNote">
+    <div class="container">
+      <div class="row">
+        <div class="offset-2 col-8 offset-lg-3 col-lg-6 d-flex flex-row justify-content-between">
+          <div class="spacing">Dolní Bečva, Chata Mír</div>
+          <div class="spacing">11. září 2021</div>
+          <div class="spacing">16.00 hodin</div>
+        </div>
+      </div>
+    </div>
+  </div> -->
   <nav>
-    <ul class="container d-flex flex-row justify-content-between align-items-center">
+    <div class="menu"></div>
+    <ul class="container">
       <li><a href="#jo">J+O</a></li>
       <li><a href="#who">Kdo tam bude?</a></li>
       <li><a href="#howGet">Jak se tam dostanu?</a></li>
@@ -47,7 +59,8 @@
       <div class="container">
         <div class="row">
           <div class="col-12 offset-md-3 col-md-6 text-center">
-            <p>Ahoj svatebčani! Doufáme, že na tomto webu najdete odpovědi na všechny otázky, které vás zajímají ohledně
+            <p>Ahoj svatebčani! Doufáme, že na tomto webu najdete odpovědi na všechny otázky, které vás zajímají
+              ohledně
               naší svatby. Ale taky nějaké ty zákulisní drby. Moc se na vás těšíme!</p>
 
             <div class="subtitle">J + O</div>
@@ -70,6 +83,7 @@
         <div class="row" style="padding-top: 34px;">
           <div class="col-12 col-lg-6 mb-5 mb-lg-0 pb-2 pb-lg-0">
             <div class="row">
+              <a class="anchor" id="tomas"></a>
               <div class="col-12 col-sm-4 d-flex justify-content-center justify-content-sm-end mb-4 mb-lg-0">
                 <div class="foto tomas"></div>
               </div>
@@ -82,7 +96,7 @@
                   </div>
                   <div class="item">
                     <div class="bullet"></div>
-                    <div>hlavní kontaktní osoba pro <strong>DOPRAVU</strong></div>
+                    <div>hlavní kontaktní osoba pro <b>DOPRAVU</b></div>
                   </div>
                   <div class="item">
                     <div class="bullet"></div>
@@ -95,11 +109,11 @@
                 </div>
                 <div class="list-contact">
                   <div class="item">
-                    <div class="foto phone"></div>
+                    <div class="icon phone"></div>
                     <div><a href="tel:+420607208488">+420 607 208 488</a></div>
                   </div>
                   <div class="item">
-                    <div class="foto mail"></div>
+                    <div class="icon mail"></div>
                     <div><a href="mailto:glozatomas@gmail.com">glozatomas@gmail.com</a></div>
                   </div>
                 </div>
@@ -108,6 +122,7 @@
           </div>
           <div class="col-12 col-lg-6">
             <div class="row">
+              <a class="anchor" id="jirka"></a>
               <div class="col-12 col-sm-4 d-flex justify-content-center justify-content-sm-end mb-4 mb-lg-0">
                 <div class="foto jirka"></div>
               </div>
@@ -120,7 +135,7 @@
                   </div>
                   <div class="item">
                     <div class="bullet"></div>
-                    <div>hlavní kontaktní osoba pro <strong>UBYTOVÁNÍ</strong></div>
+                    <div>hlavní kontaktní osoba pro <b>UBYTOVÁNÍ</b></div>
                   </div>
                   <div class="item">
                     <div class="bullet"></div>
@@ -133,11 +148,11 @@
                 </div>
                 <div class="list-contact">
                   <div class="item">
-                    <div class="foto phone"></div>
+                    <div class="icon phone"></div>
                     <div><a href="tel:+420739081772">+420 739 081 772</a></div>
                   </div>
                   <div class="item">
-                    <div class="foto mail"></div>
+                    <div class="icon mail"></div>
                     <div><a href="mailto:smerda013@gmail.com">smerda013@gmail.com</a></div>
                   </div>
                 </div>
@@ -145,23 +160,22 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="innerBlock">
-            <div><strong>Janča:</strong> „Cítím velký klid ohledně našeho vztahu. Věřím v nás.“</div>
-            <div><strong>Ondra:</strong> „Gmail má nové logo!“</div>
-            <div><strong>Janča:</strong> „…“</div>
-            <div><strong>Ondra:</strong> „Já jsem ti to strašně chtěl říct. Ale teď se klidně můžeme vrátit k tomu
-              klidu!“</div>
+        <div class="row flex-column">
+          <div class="separator"></div>
+          <div class="offset-2 col-8 d-flex d flex-row">
+            <div class="quotes"></div>
+            <div class="citates">
+              <div><b>Janča:</b> „Cítím velký klid ohledně našeho vztahu. Věřím v nás.“</div>
+              <div><b>Ondra:</b> „Gmail má nové logo!“</div>
+              <div><b>Janča:</b> „…“</div>
+              <div><b>Ondra:</b> „Já jsem ti to strašně chtěl říct. Ale teď se klidně můžeme vrátit k tomu
+                klidu!“</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="block howGet fadeIn">
+    <div class="block trees howGet fadeIn">
       <div class="container">
         <a class="anchor" id="howGet"></a>
         <h2><a href="#howGet">Jak se tam dostanu?</a></h2>
@@ -169,38 +183,41 @@
           <div class="text col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8 text-center">
             <p>
               Jižní Morava, nebo Valašsko? Jakmile jsme objevili výhled na kopce u valašské <a
-                href="https://www.chatamirbeskydy.cz/" target="_blank">Chaty Mír</a>, bylo rozhodnuto.
+                href="https://www.chatamirbeskydy.cz/" target="_blank" class="underline">Chaty Mír</a>, bylo
+              rozhodnuto.
               Protože kopce, to je naše!</p>
           </div>
         </div>
         <div class="row items">
           <div class="col-12 col-md-4 item">
-            <div class="foto car"></div>
+            <div class="icon car"></div>
             <h3>Autem</h3>
-            <p>Příjezd na chatu Mír je pouze <strong>ulicí Radhošťská z Rožnova pod Radhoštěm</strong>. Odbočte mírně
+            <p>Příjezd na chatu Mír je pouze <b>ulicí Radhošťská z Rožnova pod Radhoštěm</b>. Odbočte mírně
               doleva u kempu a pak
               se serpentinami vyškrábete až nahoru. A když cestou potkáte nějaký ten zákaz vjezdu, nelamte si s ním
               hlavu
               a pokračujte dál.</p>
             <p>Pokud byste přesto váhali, hledejte šipky s výmluvným nápisem SVATBA, dovedou vás až na místo konání.
             </p>
-            <p>Bloudíte? Volejte svědka <a href="tel:+420607208488">Tomáše</a>, navede vás!</p>
+            <p>Bloudíte? Volejte svědka <a href="#tomas" class="underline">Tomáše</a>, navede vás!</p>
           </div>
           <div class="col-12 col-md-4 item">
-            <div class="foto bus"></div>
+            <div class="icon bus"></div>
             <h3>Vlakem/busem</h3>
             <p>Pokud byste chtěli z Brna a ostatních dalekých zemí dorazit jinak než autem, je to také možné!</p>
-            <p>Volejte svědka <a href="tel:+420607208488">Tomáše</a> a domluvte se, aby vás řidiči vyzvedli na vlakovém
+            <p>Volejte svědka <a href="#tomas" class="underline">Tomáše</a> a domluvte se, aby vás řidiči
+              vyzvedli na vlakovém
               či autobusovém
               nádraží ve
               Valašském Meziříčí.</p>
           </div>
           <div class="col-12 col-md-4 item">
-            <div class="foto taxi"></div>
+            <div class="icon taxi"></div>
             <h3>Svatebním taxi</h3>
             <p>Šetřeme parkovací místa pro přespolní! Pokud jste z Valmezu a okolí, můžete využít naše řidiče!</p>
             <p>Odvezou Vás klidně z VM, Zubří nebo Vidče až na chatu! A večer, až budete znaveni, zase zpátky.</p>
-            <p>Zavolejte si se svědkem <a href="tel:+420607208488">Tomem</a> a domluvte se na podrobnostech.</p>
+            <p>Zavolejte si se svědkem <a href="#tomas" class="underline">Tomem</a> a domluvte se na
+              podrobnostech.</p>
           </div>
         </div>
       </div>
@@ -224,21 +241,24 @@
             width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="innerBlock">
-            <div><strong>Ondra:</strong> „Ty můj šušínku!“</div>
-            <div><strong>Janča:</strong> „PROČ! Proč jednou nemůžu být tvůj anděl, kopretinka, květinka, COKOLI HEZKÉHO!
-              Proč je to vždycky
-              takovéhle!“</div>
-            <div><strong>Ondra:</strong> „A co bych jako dělal s kytkou? Dyť tu urveš a hned zvadne! Co to jako je za
-              pevnou lásku? Zato
-              takový šušeň, ten se tě drží dlouho a je ti nejblíž, jak jen to je možné. A zbavuje se ho fakt těžko!“
+      <div class="container">
+        <div class="row flex-column">
+          <div class="separator"></div>
+          <div class="offset-2 col-8 d-flex d flex-row">
+            <div class="quotes"></div>
+            <div class="citates">
+              <div><b>Ondra:</b> „Ty můj šušínku!“</div>
+              <div><b>Janča:</b> „PROČ! Proč jednou nemůžu být tvůj anděl, kopretinka, květinka, COKOLI
+                HEZKÉHO!
+                Proč je to vždycky
+                takovéhle!“</div>
+              <div><b>Ondra:</b> „A co bych jako dělal s kytkou? Dyť tu urveš a hned zvadne! Co to jako je za
+                pevnou lásku? Zato
+                takový šušeň, ten se tě drží dlouho a je ti nejblíž, jak jen to je možné. A zbavuje se ho fakt těžko!“
+              </div>
+              <div><b>Janča:</b> „Já to vzdávám!“</div>
+              <div><b>Ondra:</b> „Bezva, šušínku!“</div>
             </div>
-            <div><strong>Janča:</strong> „Já to vzdávám!“</div>
-            <div><strong>Ondra:</strong> „Bezva, šušínku!“</div>
           </div>
         </div>
       </div>
@@ -250,8 +270,8 @@
         <div class="row">
           <div class="text col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8 text-center">
             <p>Chata je to krásná, ale malá. Proto v ní máme místo ke spánku hlavně pro lidi z daleka. Pokud za námi
-              jedete z Prahy, Brna nebo Zlína, máme pro vás postel přímo na místě. Volejte svědka <a
-                href="tel:+420739081772">Šmerdu</a>
+              jedete z Prahy, Brna nebo Zlína, máme pro vás postel přímo na místě. Volejte svědka <a href="#jirka"
+                class="underline">Šmerdu</a>
               a domluvte se na podrobnostech.
             </p>
             <p>
@@ -259,22 +279,31 @@
           </div>
         </div>
         <div class="row">
-          <div class="nature"></div>
+          <div class="col-4 foto nature"></div>
+          <div class="col-4 foto cabinInner"></div>
+          <div class="col-4 foto cabinOuter"></div>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="innerBlock">
-            <div><strong>Ondra:</strong> „Ty moje slunečnice!“</div>
-            <div><strong>Janča:</strong> „Já teda slunečnice nemám moc ráda…“</div>
-            <div><strong>Ondra:</strong> „Jak chceš, PUPÍČKU!“</div>
-            <div><strong>Janča:</strong> „Aaaaaaaaa!“</div>
-            <div><strong>Ondra:</strong> „MĚLAS MOŽNOST VOLBY!“</div>
+        <div class="row flex-column">
+          <div class="separator"></div>
+          <div class="offset-2 col-8 d-flex d flex-row">
+            <div class="quotes"></div>
+            <div class="citates">
+              <div><b>Ondra:</b> „Miluju na tobě každou část. Třeba i tenhle chlup!“</div>
+              <div><b>Janča:</b> „Aaaa, já jsem holčička, my žádné chlupy nemáme!“</div>
+              <div><b>Ondra:</b> „Ale jo, koukej, tenhle na ruce! A vedle něj tohle znamínko, to taky miluju!“
+              </div>
+              <div><b>Janča:</b> „To bys tak mohl přidat ještě tady celulitidu a máš to komplet.“</div>
+              <div><b>Ondra:</b> „Přesně! Prostě chlupy, celulitida a znamínka, to je celá moje Jana!“</div>
+              <div><b>Janča:</b> „…“</div>
+              <div><b>Ondra:</b> „Až to budeš vyprávět holkám, jaký jsem hajzl, budu rád, když zmíníš, že
+                původně
+                jsem to fakt myslel
+                hezky!“</div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
     <div class="block trees what fadeIn">
       <div class="container">
@@ -286,28 +315,48 @@
               svatební šílenství a s ním spojené nakupování. Určitě si kvůli nám nemusíte kupovat nový svatební ohoz.
               Budeme naopak moc rádi, když prohledáte skříň a oblečete si něco, co už vlastníte.</p>
 
-            <p><strong>Obřad se budeme snažit mít důstojný, ale hned po něm skočíme do svetru a tenisek</strong> a
+            <p><b>Obřad se budeme snažit mít důstojný, ale hned po něm skočíme do svetru a tenisek</b> a
               opečeme si buřta u
-              ohně. S těmi buřty na pozvánkách jsme si totiž nedělali srandu. Svatební <strong>obřad navíc bude v
-                lese</strong>, kam se
+              ohně. S těmi buřty na pozvánkách jsme si totiž nedělali srandu. Svatební <b>obřad navíc bude v
+                lese</b>, kam se
               jde kousek po nezpevněné lesní cestě.</p>
           </div>
         </div>
         <div class="row suiteFoto">
-          <div class="offset-0 col-12 offset-lg-2 col-lg-8">
+          <div class="col-12">
             <div class="row">
               <div class="col-12 col-md-6 mb-5 mb-md-0">
                 <div class="row">
-                  <div class="col-12 headline">Muži</div>
-                  <div class="col-6 foto suiteMan1"></div>
-                  <div class="col-6 foto suiteMan2"></div>
+                  <div class="col-12 headline">Muži odpoledne</div>
+                  <div class="col-4 foto suitManAfternoon1"></div>
+                  <div class="col-4 foto suitManAfternoon2"></div>
+                  <div class="col-4 foto suitManAfternoon3"></div>
                 </div>
               </div>
               <div class="col-12 col-md-6">
                 <div class="row">
-                  <div class="col-12 headline">Dámy</div>
-                  <div class="col-6 foto suiteWoman1"></div>
-                  <div class="col-6 foto suiteWoman2"></div>
+                  <div class="col-12 headline">Muži večer</div>
+                  <div class="col-4 foto suitManNight1"></div>
+                  <div class="col-4 foto suitManNight2"></div>
+                  <div class="col-4 foto suitManNight3"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6 mb-5 mb-md-0">
+                <div class="row">
+                  <div class="col-12 headline">Dámy odpoledne</div>
+                  <div class="col-4 foto suitWomanAfternoon1"></div>
+                  <div class="col-4 foto suitWomanAfternoon2"></div>
+                  <div class="col-4 foto suitWomanAfternoon3"></div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="row">
+                  <div class="col-12 headline">Dámy večer</div>
+                  <div class="col-4 foto suitWomanNight1"></div>
+                  <div class="col-4 foto suitWomanNight2"></div>
+                  <div class="col-4 foto suitWomanNight3"></div>
                 </div>
               </div>
             </div>
@@ -315,14 +364,14 @@
         </div>
         <div class="row">
           <div class="text col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8 text-center">
-            <p><strong>Neberte si oblek. Neberte si plesovou róbu až na zem.</strong> Balerínky, polobotky nebo
+            <p><b>Neberte si oblek. Neberte si plesovou róbu až na zem.</b> Balerínky, polobotky nebo
               neutrální tenisky budou
               to
               pravé. Službu vám udělá i svetr, košile nebo jednobarevné tričko a kalhoty. Nebojte se, že byste byli
               málo
               svatební. Kromě havajské košile a rozervaných riflí je v pohodě cokoliv, v čem vám bude fajn!</p>
 
-            <p><strong>Nezapomeňte něco teplého!</strong> Večery na Valašsku jsou v září zrádné a nevyzpytatelné.
+            <p><b>Nezapomeňte něco teplého!</b> Večery na Valašsku jsou v září zrádné a nevyzpytatelné.
               Mikina
               navíc se vám
               bude
@@ -334,41 +383,22 @@
               sukně
               pod kolena.</p>
 
-            <p><strong>S barvou oblečení si nedělejte hlavu, žádnou speciální barvu svatby nemáme.</strong></p>
+            <p><b>S barvou oblečení si nedělejte hlavu, žádnou speciální barvu svatby nemáme.</b></p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="innerBlock">
-            <div><strong>Ondra:</strong> „Nemáš náhodou PMS?“</div>
-            <div><strong>Janča:</strong> „PROSIM?“</div>
-            <div><strong>Ondra:</strong> „Já jsem to myslel hezky! A nechtěl jsem tu hádku zlehčovat.“</div>
-            <div><strong>Janča:</strong> „Jako časově to sedí, tak asi mám. Ale nechci, abys to tím zlehčoval.“</div>
-            <div><strong>Ondra:</strong> „No dyť… To říkám!“</div>
-            <div><strong>Janča:</strong> „Já vím, ale strašně jsi mě nasral, jak ses zeptal.“</div>
-            <div><strong>Ondra vítězoslavně:</strong>„A víš proč? PROTOŽE MÁŠ PMS!!!“</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="innerBlock">
-            <div><strong>Ondra:</strong> „Miluju na tobě každou část. Třeba i tenhle chlup!“</div>
-            <div><strong>Janča:</strong> „Aaaa, já jsem holčička, my žádné chlupy nemáme!“</div>
-            <div><strong>Ondra:</strong> „Ale jo, koukej, tenhle na ruce! A vedle něj tohle znamínko, to taky miluju!“
+        <div class="row flex-column">
+          <div class="separator"></div>
+          <div class="offset-2 col-8 d-flex d flex-row">
+            <div class="quotes"></div>
+            <div class="citates">
+              <div><b>Ondra:</b> „Nemáš náhodou PMS?“</div>
+              <div><b>Janča:</b> „PROSIM?“</div>
+              <div><b>Ondra:</b> „Já jsem to myslel hezky! A nechtěl jsem tu hádku zlehčovat.“</div>
+              <div><b>Janča:</b> „Jako časově to sedí, tak asi mám. Ale nechci, abys to tím zlehčoval.“</div>
+              <div><b>Ondra:</b> „No dyť… To říkám!“</div>
+              <div><b>Janča:</b> „Já vím, ale strašně jsi mě nasral, jak ses zeptal.“</div>
+              <div><b>Ondra vítězoslavně:</b>„A víš proč? PROTOŽE MÁŠ PMS!!!“</div>
             </div>
-            <div><strong>Janča:</strong> „To bys tak mohl přidat ještě tady celulitidu a máš to komplet.“</div>
-            <div><strong>Ondra:</strong> „Přesně! Prostě chlupy, celulitida a znamínka, to je celá moje Jana!“</div>
-            <div><strong>Janča:</strong> „…“</div>
-            <div><strong>Ondra:</strong> „Až to budeš vyprávět holkám, jaký jsem hajzl, budu rád, když zmíníš, že
-              původně
-              jsem to fakt myslel
-              hezky!“</div>
           </div>
         </div>
       </div>
@@ -406,48 +436,84 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="text offset-0 col-12 offset-md-2 col-md-8">
-            <div class="timeLine">
-              <div class="timePoint">
-                <div class="time light">11.9.2021</div>
-                <div class="point"></div>
+        <div class="row justify-content-center">
+          <div class="timeLine">
+            <div class="timePoint">
+              <div class="time light">11.9.2021</div>
+              <div class="point"></div>
+              <div class="eventBlock d-flex flex-column">
+                <div class="timeMobile light">11.9.2021</div>
               </div>
-              <div class="timePoint">
-                <div class="time">16:00</div>
-                <div class="point"></div>
-                <div class="event">OBŘAD</div>
+            </div>
+            <div class="timePoint">
+              <div class="time">16:00</div>
+              <div class="point"></div>
+              <div class="eventBlock d-flex flex-column">
+                <div class="timeMobile">16:00</div>
+                <div class="eventTitle d-flex flex-row align-items-center justify-content-between flex-grow-1">
+                  <div class="event">OBŘAD</div>
+                  <div class="arrow down"></div>
+                </div>
+                <div class="desc">TODO Myrty u nás nenajdete. Takže vás na uvítanou nikdo nebodne špendlíkem, zato vám
+                  svědkové nabídnou tradiční dary Valašska. A to se vyplatí! Také si vás poznačí do seznamu hostů,
+                  navedou vás k ubytování i na místo obřadu a zodpoví veškeré další dotazy. Po příjezdu na chatu se
+                  proto prosím hlaste u Toma a Šmerdy. Do 15.45 se prosím ubytujte a přichystejte kapesníčky na slzy
+                  dojetí (nebo smíchu!).
+                </div>
               </div>
-              <div class="timePoint">
-                <div class="time">17:00</div>
-                <div class="point"></div>
-                <div class="event">PRVNÍ TANEC</div>
+            </div>
+            <div class="timePoint">
+              <div class="time">17:00</div>
+              <div class="point"></div>
+              <div class="eventBlock d-flex flex-column">
+                <div class="timeMobile">17:00</div>
+                <div class="eventTitle d-flex flex-row align-items-center justify-content-between flex-grow-1">
+                  <div class="event">PRVNÍ TANEC</div>
+                  <div class="arrow down"></div>
+                </div>
+                <div class="desc">TODO Myrty u nás nenajdete. Takže vás na uvítanou nikdo nebodne špendlíkem, zato vám
+                  svědkové nabídnou tradiční dary Valašska. A to se vyplatí! Také si vás poznačí do seznamu hostů,
+                  navedou vás k ubytování i na místo obřadu a zodpoví veškeré další dotazy. Po příjezdu na chatu se
+                  proto prosím hlaste u Toma a Šmerdy. Do 15.45 se prosím ubytujte a přichystejte kapesníčky na slzy
+                  dojetí (nebo smíchu!).
+                </div>
               </div>
-              <div class="timePoint">
-                <div class="time">17:30</div>
-                <div class="point"></div>
-                <div class="event">VOLNÁ ZÁBAVA</div>
+            </div>
+            <div class="timePoint">
+              <div class="time">17:30</div>
+              <div class="point"></div>
+              <div class="eventBlock d-flex flex-column">
+                <div class="timeMobile">17:30</div>
+                <div class="eventTitle d-flex flex-row align-items-center justify-content-between flex-grow-1">
+                  <div class="event">VOLNÁ ZÁBAVA</div>
+                  <div class="arrow"></div>
+                </div>
+                <div class="desc">TODO Myrty u nás nenajdete. Takže vás na uvítanou nikdo nebodne špendlíkem, zato vám
+                  svědkové nabídnou tradiční dary Valašska. A to se vyplatí! Také si vás poznačí do seznamu hostů,
+                  navedou vás k ubytování i na místo obřadu a zodpoví veškeré další dotazy. Po příjezdu na chatu se
+                  proto prosím hlaste u Toma a Šmerdy. Do 15.45 se prosím ubytujte a přichystejte kapesníčky na slzy
+                  dojetí (nebo smíchu!).
+                </div>
               </div>
-              <div class="timePoint">
-                <div class="time light">12.9.2021</div>
-                <div class="point"></div>
+            </div>
+            <div class="timePoint">
+              <div class="time light">12.9.2021</div>
+              <div class="point"></div>
+              <div class="eventBlock d-flex flex-column">
+                <div class="timeMobile">17:30</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="innerBlock">
-            <div><strong>Ondra:</strong> „Nemáš náhodou PMS?“</div>
-            <div><strong>Janča:</strong> „PROSIM?“</div>
-            <div><strong>Ondra:</strong> „Já jsem to myslel hezky! A nechtěl jsem tu hádku zlehčovat.“</div>
-            <div><strong>Janča:</strong> „Jako časově to sedí, tak asi mám. Ale nechci, abys to tím zlehčoval.“</div>
-            <div><strong>Ondra:</strong> „No dyť… To říkám!“</div>
-            <div><strong>Janča:</strong> „Já vím, ale strašně jsi mě nasral, jak ses zeptal.“</div>
-            <div><strong>Ondra vítězoslavně:</strong>„A víš proč? PROTOŽE MÁŠ PMS!!!“</div>
+        <div class="row flex-column">
+          <div class="separator"></div>
+          <div class="offset-2 col-8 d-flex d flex-row">
+            <div class="quotes"></div>
+            <div class="citates">
+              <div>Ležíme v objetí po hádce ohledně rozdělení domácích prací</div>
+              <div><b>Janča:</b> „Ty máš tak hebké nožičky na to, že jsi chlap!“</div>
+              <div><b>Ondra:</b> „I ručičky. A víš proč? Z TOHO, JAK TADY VŮBEC NIC NEDĚLÁM!!!“</div>
+            </div>
           </div>
         </div>
       </div>
@@ -459,8 +525,8 @@
         <div class="row">
           <div class="text col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8 text-center">
             <p>Našim cílem je velmi lidská, domácká, rodinná a uvolněná svatba. Po luxusním porcelánu netoužíme.
-              <strong>Byli
-                bychom ale moc rádi, kdybyste se do příprav naší svatby nějak zapojili!</strong> Věříme totiž, že když
+              <b>Byli
+                bychom ale moc rádi, kdybyste se do příprav naší svatby nějak zapojili!</b> Věříme totiž, že když
               do té svatby
               vložíte kousek sebe, vtáhne vás to víc!
             </p>
@@ -494,25 +560,25 @@
             <p>Prostě každý, co umí a co ho baví. Jste báječní a tohle jsou ty nejlepší svatební dary, jaké jste nám
               mohli dát!</p>
 
-            <p><strong>Takže jestli byste se taky rádi zapojili a ještě svůj úkol nemáte, dejte nám vědět, něco
-                vymyslíme!</strong>
+            <p><b>Takže jestli byste se taky rádi zapojili a ještě svůj úkol nemáte, dejte nám vědět, něco
+                vymyslíme!</b>
             </p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="innerBlock">
-            <div>Ležíme v objetí po hádce ohledně rozdělení domácích prací</div>
-            <div><strong>Janča:</strong> „Ty máš tak hebké nožičky na to, že jsi chlap!“</div>
-            <div><strong>Ondra:</strong> „I ručičky. A víš proč? Z TOHO, JAK TADY VŮBEC NIC NEDĚLÁM!!!“</div>
+        <div class="row flex-column">
+          <div class="separator"></div>
+          <div class="offset-2 col-8 d-flex d flex-row">
+            <div class="quotes"></div>
+            <div class="citates">
+              <div><b>Ondra:</b> „Tyjo, supr! Je zima a vlhko a možná bude pršet! Vstávej, jedem na výlet,
+                nikdo tam nebude!“</div>
+              <div><b>Janča s kafem v ruce v posteli:</b> „Proč jsem si jen musela najít skauta!“</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="block burt">
+    <div class="block fotoBlock">
       <div class="container">
         <div class="row">
           <div class="text offset-2 col-8 text-center burt">
@@ -520,20 +586,18 @@
             </p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="block foto">
-      <div class="container">
         <div class="row">
-          <div class="offset-2 col-8 text-center">
-            FOTO
-          </div>
+          <div class="col-12 col-lg-8 foto love"></div>
+          <div class="col-12 col-lg-4 foto hug"></div>
+          <div class="col-12 col-lg-4 foto tongue"></div>
+          <div class="col-12 col-lg-8 foto view"></div>
         </div>
       </div>
   </main>
   <footer>
-    Vytvořeno s láskou, 2021<br>
-    Petr Beran, Petr Domkař, Kristýna Loukotová, Tomáš Válka
+    <div> Vytvořeno s <a href="https://bit.ly/3oOCIy8" target="_blank">láskou</a>, 2021<br>
+      Petr Beran, Petr Domkař, Kristýna Loukotová, Tomáš Válka
+    </div>
   </footer>
 </body>
 

@@ -13,4 +13,27 @@ $(window).on('load', function () {
         })
     }
     $(window).scroll(function () { fadeIn() }) // fade elements on scroll
+
+    // $(window).scroll(function () {
+    //     if ($(window).scrollTop() > 10) {
+    //         $('.headerNote').show()
+    //         $('nav').addClass('withHeaderNote')
+    //     } else {
+    //         $('.headerNote').hide()
+    //         $('nav').removeClass('withHeaderNote')
+    //     }
+    // })
+
+    $('.menu').click(function () {
+        $('nav > ul').toggleClass('mobile')
+    })
+
+    $('nav > ul > li > a ').click(function () {
+        $('nav > ul').removeClass('mobile')
+    })
+
+    $('.eventTitle').click(function () {
+        $(this).toggleClass('open')
+        $(this).next('.desc').slideToggle(300)
+    })
 })
