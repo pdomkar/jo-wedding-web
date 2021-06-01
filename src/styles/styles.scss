@@ -59,23 +59,77 @@ html {
             background: #ffffff;
             z-index: 10;
 
-            // @media (min-width: 992px) {
-            //     &.withHeaderNote {
-            //         top: 44px;
-            //         border: 1px solid rgba(0, 0, 0, 0.25);
-            //     }
-            // }
+            &.withHeaderNote {
+                // top: 44px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+            }
 
-            .menu {
+            .menuWrapper {
+                display: flex;
+
+                .menu {
+                    display: none;
+                    padding: 14px;
+                    border: 1px solid #ffffff;
+
+                    .icon {
+                        width: 24px;
+                        height: 24px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.667 5.571H1.333c-.353 0-.692-.135-.942-.376A1.263 1.263 0 010 4.285c0-.34.14-.667.39-.908C.64 3.135.98 3 1.334 3h21.334c.353 0 .692.135.942.377.25.24.391.568.391.909 0 .34-.14.668-.39.909s-.59.376-.943.376zM24 12c0-.341-.14-.668-.39-.91a1.359 1.359 0 00-.943-.376H1.333c-.353 0-.692.136-.942.377S0 11.659 0 12c0 .341.14.668.39.91.25.24.59.376.943.376h21.334c.353 0 .692-.136.942-.377S24 12.341 24 12zm0 7.714c0-.34-.14-.668-.39-.909a1.359 1.359 0 00-.943-.376H1.333c-.353 0-.692.135-.942.376s-.391.568-.391.91c0 .34.14.667.39.908s.59.377.943.377h21.334c.353 0 .692-.136.942-.377.25-.24.391-.568.391-.909z' fill='%23000'/%3E%3C/svg%3E");
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        margin-right: 10px;
+                    }
+
+                    margin: 8px 15px;
+                    margin-left: 10px;
+                    font-weight: bold;
+
+                    @media (max-width: 992px) {
+                        display: flex;
+                    }
+                }
+            }
+
+            @media (max-width: 992px) {
+                &.mobile {
+                    .menuWrapper {
+                        .menu {
+                            border: 1px solid #000000;
+                        }
+                    }
+                }
+            }
+
+            .menuCloseWrapper {
                 display: none;
-                width: 24px;
-                height: 24px;
-                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23C4C4C4' d='M0 0h24v24H0z'/%3E%3C/svg%3E");
-                background-position: center center;
-                margin: 15px;
+                border-top: 1px solid rgba(0, 0, 0, 0.25);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+                padding: 34px 0 10px;
 
-                @media (max-width: 992px) {
-                    display: block;
+                .menuClose {
+                    display: flex;
+                    padding: 0 14px;
+
+                    .icon {
+                        width: 24px;
+                        height: 24px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.451 5.421L5.367 20.506c-.25.25-.586.394-.933.4a1.263 1.263 0 01-.92-.366 1.263 1.263 0 01-.366-.92c.006-.347.15-.682.4-.932L18.633 3.603c.25-.25.586-.394.933-.4.348-.007.678.125.92.366.24.241.372.572.366.92-.006.346-.15.682-.4.932z' fill='%23000'/%3E%3Cpath d='M18.633 20.397L3.548 5.312a1.359 1.359 0 01-.4-.933 1.263 1.263 0 01.367-.919c.24-.24.571-.373.919-.366.347.006.683.15.933.4L20.452 18.58c.25.25.394.586.4.933.006.347-.126.678-.367.919a1.263 1.263 0 01-.919.367 1.36 1.36 0 01-.933-.4z' fill='%23000'/%3E%3C/svg%3E");
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        margin-right: 10px;
+                    }
+
+                    margin: 15px;
+                    font-weight: bold;
+                }
+            }
+
+            @media (max-width: 992px) {
+                &.mobile {
+                    .menuCloseWrapper {
+                        display: flex;
+                    }
                 }
             }
 
@@ -88,22 +142,6 @@ html {
 
                 @media (max-width: 992px) {
                     display: none;
-
-                    &.mobile {
-                        display: flex;
-                        flex-direction: column;
-                        padding-top: 0;
-
-                        li {
-                            width: 100%;
-                            text-align: center;
-
-                            a {
-                                padding: 10px 0;
-                                width: 100%;
-                            }
-                        }
-                    }
                 }
 
                 li {
@@ -114,6 +152,33 @@ html {
                         font-size: 16px;
                         line-height: 19px;
                         padding: 20px 0;
+
+                        &.active {
+                            font-weight: bold;
+                            color: #007261;
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 992px) {
+                &.mobile {
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        margin-bottom: 0;
+
+                        li {
+                            width: 100%;
+                            text-align: center;
+
+                            a {
+                                padding: 14px 0 15px;
+                                width: 100%;
+                            }
+                        }
                     }
                 }
             }
@@ -123,7 +188,7 @@ html {
             a.anchor {
                 display: block;
                 position: relative;
-                top: -100px;
+                top: -150px;
                 visibility: hidden;
             }
 
@@ -154,10 +219,18 @@ html {
             }
 
             .text {
+                padding-left: 24px;
+                padding-right: 24px;
+
                 @media (min-width: 576px) {
                     padding-left: 59px;
                     padding-right: 59px;
                 }
+            }
+
+            .mobileXSpacing {
+                padding-left: 24px;
+                padding-right: 24px;
             }
 
             .separator {
@@ -206,6 +279,7 @@ html {
 
                     @media (max-width: 992px) {
                         padding: 0 15px;
+                        background-image: url('../assets/images/trees-bg-mobile.png');
                     }
 
                     .title {
@@ -470,6 +544,30 @@ html {
                             &.suitManNight3 {
                                 background-image: url("../assets/images/suit-man-night3.png");
                             }
+
+                            &.suitWomanAfternoon1 {
+                                background-image: url("../assets/images/suit-woman-afternoon1.png");
+                            }
+
+                            &.suitWomanAfternoon2 {
+                                background-image: url("../assets/images/suit-woman-afternoon2.png");
+                            }
+
+                            &.suitWomanAfternoon3 {
+                                background-image: url("../assets/images/suit-woman-afternoon3.png");
+                            }
+
+                            &.suitWomanNight1 {
+                                background-image: url("../assets/images/suit-woman-night1.png");
+                            }
+
+                            &.suitWomanNight2 {
+                                background-image: url("../assets/images/suit-woman-night2.png");
+                            }
+
+                            &.suitWomanNight3 {
+                                background-image: url("../assets/images/suit-woman-night3.png");
+                            }
                         }
                     }
                 }
@@ -489,6 +587,11 @@ html {
                             text-align: center;
                             letter-spacing: 0.02em;
                             padding-bottom: 30px;
+                        }
+
+                        @media (max-width: 576px) {
+                            margin-left: -24px;
+                            margin-right: -24px;
                         }
                     }
 
@@ -570,7 +673,7 @@ html {
                             .timeMobile {
                                 display: none;
                                 flex-shrink: 0;
-                                width: 110px;
+                                width: 210px;
                                 text-align: left;
                                 margin-right: 30px;
                                 font-size: 20px;
@@ -694,20 +797,40 @@ html {
                             background-size: cover;
                         }
 
+                        @media (max-width: 576px) {
+                            background-size: contain;
+                        }
+
                         &.love {
                             background-image: url("../assets/images/love.png");
+
+                            @media (max-width: 576px) {
+                                background-image: url("../assets/images/love-mobile.png");
+                            }
                         }
 
                         &.hug {
                             background-image: url("../assets/images/hug.png");
+
+                            @media (max-width: 576px) {
+                                background-image: url("../assets/images/hug-mobile.png");
+                            }
                         }
 
                         &.tongue {
                             background-image: url("../assets/images/tongue.png");
+
+                            @media (max-width: 576px) {
+                                background-image: url("../assets/images/tongue-mobile.png");
+                            }
                         }
 
                         &.view {
                             background-image: url("../assets/images/view.png");
+
+                            @media (max-width: 576px) {
+                                background-image: url("../assets/images/view-mobile.png");
+                            }
                         }
                     }
                 }
