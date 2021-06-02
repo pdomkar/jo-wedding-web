@@ -764,10 +764,6 @@ html {
                     }
                 }
 
-                &.which {
-                    //
-                }
-
                 &.fotoBlock {
                     padding-bottom: 100px;
 
@@ -846,6 +842,8 @@ html {
             height: 84px;
             font-family: Affogato, sans-serif;
             text-align: center;
+            padding-left: 24px;
+            padding-right: 24px;
 
             a {
                 color: #ffffff;
