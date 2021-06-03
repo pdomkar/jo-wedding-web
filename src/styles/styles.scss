@@ -605,6 +605,7 @@ html {
 
                         @media (max-width: 576px) {
                             width: 100%;
+                            padding: 0 24px;
                         }
 
                         &::before {
@@ -617,7 +618,7 @@ html {
                             left: 177px;
 
                             @media (max-width: 576px) {
-                                left: 36px;
+                                left: 28px;
                             }
                         }
 
