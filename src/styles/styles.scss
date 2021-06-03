@@ -12,6 +12,7 @@ html {
         font-size: 16px;
         line-height: 24px;
         color: #000000;
+        background-color: rgba(250, 250, 247, 0.5);
 
         a {
             font-weight: 500;
@@ -31,6 +32,10 @@ html {
                     text-decoration: underline;
                 }
             }
+        }
+
+        p {
+            margin-bottom: 1.5rem;
         }
 
         // .headerNote {
@@ -70,7 +75,6 @@ html {
                 .menu {
                     display: none;
                     padding: 14px;
-                    border: 1px solid #ffffff;
 
                     .icon {
                         width: 24px;
@@ -95,40 +99,10 @@ html {
                 &.mobile {
                     .menuWrapper {
                         .menu {
-                            border: 1px solid #000000;
+                            .icon {
+                                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.451 5.421L5.367 20.506c-.25.25-.586.394-.933.4a1.263 1.263 0 01-.92-.366 1.263 1.263 0 01-.366-.92c.006-.347.15-.682.4-.932L18.633 3.603c.25-.25.586-.394.933-.4.348-.007.678.125.92.366.24.241.372.572.366.92-.006.346-.15.682-.4.932z' fill='%23000'/%3E%3Cpath d='M18.633 20.397L3.548 5.312a1.359 1.359 0 01-.4-.933 1.263 1.263 0 01.367-.919c.24-.24.571-.373.919-.366.347.006.683.15.933.4L20.452 18.58c.25.25.394.586.4.933.006.347-.126.678-.367.919a1.263 1.263 0 01-.919.367 1.36 1.36 0 01-.933-.4z' fill='%23000'/%3E%3C/svg%3E");
+                            }
                         }
-                    }
-                }
-            }
-
-            .menuCloseWrapper {
-                display: none;
-                border-top: 1px solid rgba(0, 0, 0, 0.25);
-                border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-                padding: 34px 0 10px;
-
-                .menuClose {
-                    display: flex;
-                    padding: 0 14px;
-
-                    .icon {
-                        width: 24px;
-                        height: 24px;
-                        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.451 5.421L5.367 20.506c-.25.25-.586.394-.933.4a1.263 1.263 0 01-.92-.366 1.263 1.263 0 01-.366-.92c.006-.347.15-.682.4-.932L18.633 3.603c.25-.25.586-.394.933-.4.348-.007.678.125.92.366.24.241.372.572.366.92-.006.346-.15.682-.4.932z' fill='%23000'/%3E%3Cpath d='M18.633 20.397L3.548 5.312a1.359 1.359 0 01-.4-.933 1.263 1.263 0 01.367-.919c.24-.24.571-.373.919-.366.347.006.683.15.933.4L20.452 18.58c.25.25.394.586.4.933.006.347-.126.678-.367.919a1.263 1.263 0 01-.919.367 1.36 1.36 0 01-.933-.4z' fill='%23000'/%3E%3C/svg%3E");
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                        margin-right: 10px;
-                    }
-
-                    margin: 15px;
-                    font-weight: bold;
-                }
-            }
-
-            @media (max-width: 992px) {
-                &.mobile {
-                    .menuCloseWrapper {
-                        display: flex;
                     }
                 }
             }
@@ -190,6 +164,10 @@ html {
                 position: relative;
                 top: -150px;
                 visibility: hidden;
+
+                @media (max-width: 576px) {
+                    top: -130px;
+                }
             }
 
             h2,
@@ -206,6 +184,11 @@ html {
                 padding-bottom: 30px;
                 margin: 0;
                 font-weight: 500;
+
+                @media (max-width: 576px) {
+                    font-size: 36px;
+                    line-height: 48px;
+                }
             }
 
             h3 {
@@ -216,6 +199,11 @@ html {
                 letter-spacing: 0.02em;
                 padding-bottom: 20px;
                 margin: 0;
+
+                &.bigger {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
             }
 
             .text {
@@ -259,6 +247,10 @@ html {
             .block {
                 padding: 100px 0 200px;
 
+                @media (max-width: 576px) {
+                    padding-top: 80px;
+                }
+
                 &.fadeIn {
                     opacity: 0.1;
                 }
@@ -276,6 +268,7 @@ html {
                     background-image: url('../assets/images/trees-bg.png');
                     background-repeat: repeat-x;
                     background-position: bottom;
+                    background-color: #ffffff;
 
                     @media (max-width: 992px) {
                         padding: 0 15px;
@@ -291,8 +284,13 @@ html {
                         text-transform: uppercase;
 
                         @media (max-width: 576px) {
-                            font-size: 40px;
-                            line-height: 48px;
+                            font-size: 37px;
+                            line-height: 44px;
+                        }
+
+                        @media (max-width: 360px) {
+                            font-size: 34px;
+                            line-height: 44px;
                         }
                     }
 
@@ -486,6 +484,7 @@ html {
                         background-position: center;
                         background-size: contain;
                         margin-top: 48px;
+                        filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
 
                         &.nature {
                             background-image: url("../assets/images/nature.png");
@@ -504,7 +503,10 @@ html {
                 &.what {
                     .suiteFoto {
                         margin-top: 38px;
-                        margin-bottom: 60px;
+
+                        @media (min-width: 767px) {
+                            margin-bottom: 60px;
+                        }
 
                         .headline {
                             font-weight: bold;
@@ -520,6 +522,7 @@ html {
                             background-position: center;
                             background-size: contain;
                             margin-bottom: 19px;
+                            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
 
                             &.suitManAfternoon1 {
                                 background-image: url("../assets/images/suit-man-afternoon1.png");
@@ -575,7 +578,7 @@ html {
                 &.howBe {
                     .alert {
                         margin-top: 24px;
-                        margin-bottom: 80px;
+                        margin-bottom: 60px;
                         padding: 30px;
                         background: rgba(0, 0, 0, 0.04);
 
@@ -602,7 +605,6 @@ html {
 
                         @media (max-width: 576px) {
                             width: 100%;
-                            padding: 0 12px 0 24px;
                         }
 
                         &::before {
@@ -612,10 +614,10 @@ html {
                             background-color: #c4c4c4;
                             top: 0;
                             bottom: 0;
-                            left: 172px;
+                            left: 177px;
 
                             @media (max-width: 576px) {
-                                left: 28px;
+                                left: 36px;
                             }
                         }
 
@@ -653,7 +655,7 @@ html {
                             .time {
                                 display: block;
                                 flex-shrink: 0;
-                                width: 110px;
+                                width: 115px;
                                 text-align: right;
                                 margin-right: 30px;
                                 font-size: 20px;
@@ -701,17 +703,12 @@ html {
                                 .eventTitle {
                                     padding: 12px;
                                     width: 324px;
-                                    border: 1px solid #ffffff;
 
                                     @media (max-width: 576px) {
                                         width: 100%;
                                     }
 
                                     &:hover {
-                                        &:not(.open) {
-                                            border: 1px solid #000000;
-                                        }
-
                                         cursor: pointer;
                                         color: #007261;
 
@@ -725,20 +722,6 @@ html {
                                         font-weight: bold;
                                         font-size: 20px;
                                         line-height: 22px;
-                                    }
-
-                                    &.open {
-                                        .arrow {
-                                            background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.545 3.182c-.235 0-.51.077-.717.282-.11.11-.198.236-.255.385a1.165 1.165 0 00-.073.424c0 .253.086.484.22.686L.748 5l5.49 5.49c.096.096.217.173.33.225.112.051.266.103.432.103.27 0 .534-.1.763-.328l5.454-5.455c.218-.218.283-.504.283-.762 0-.26-.065-.545-.283-.763a1.054 1.054 0 00-.763-.328c-.253 0-.484.086-.686.22l-.041.027L7 8.156 2.308 3.464c-.218-.217-.504-.282-.763-.282z' fill='%23000'/%3E%3C/svg%3E");
-                                            transform: rotate(180deg);
-                                        }
-
-                                        &:hover {
-                                            .arrow {
-                                                background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.545 3.182c-.235 0-.51.077-.717.282-.11.11-.198.236-.255.385a1.165 1.165 0 00-.073.424c0 .253.086.484.22.686L.748 5l5.49 5.49c.096.096.217.173.33.225.112.051.266.103.432.103.27 0 .534-.1.763-.328l5.454-5.455c.218-.218.283-.504.283-.762 0-.26-.065-.545-.283-.763a1.054 1.054 0 00-.763-.328c-.253 0-.484.086-.686.22l-.041.027L7 8.156 2.308 3.464c-.218-.217-.504-.282-.763-.282z' fill='%23007261'/%3E%3C/svg%3E");
-                                                transform: rotate(180deg);
-                                            }
-                                        }
                                     }
 
                                     .arrow {
@@ -760,6 +743,33 @@ html {
                                     }
                                 }
                             }
+
+                            &.open {
+                                .eventBlock {
+                                    .eventTitle {
+                                        .arrow {
+                                            background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.545 3.182c-.235 0-.51.077-.717.282-.11.11-.198.236-.255.385a1.165 1.165 0 00-.073.424c0 .253.086.484.22.686L.748 5l5.49 5.49c.096.096.217.173.33.225.112.051.266.103.432.103.27 0 .534-.1.763-.328l5.454-5.455c.218-.218.283-.504.283-.762 0-.26-.065-.545-.283-.763a1.054 1.054 0 00-.763-.328c-.253 0-.484.086-.686.22l-.041.027L7 8.156 2.308 3.464c-.218-.217-.504-.282-.763-.282z' fill='%23000'/%3E%3C/svg%3E");
+                                            transform: rotate(180deg);
+                                        }
+
+                                        &:hover {
+                                            .arrow {
+                                                background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.545 3.182c-.235 0-.51.077-.717.282-.11.11-.198.236-.255.385a1.165 1.165 0 00-.073.424c0 .253.086.484.22.686L.748 5l5.49 5.49c.096.096.217.173.33.225.112.051.266.103.432.103.27 0 .534-.1.763-.328l5.454-5.455c.218-.218.283-.504.283-.762 0-.26-.065-.545-.283-.763a1.054 1.054 0 00-.763-.328c-.253 0-.484.086-.686.22l-.041.027L7 8.156 2.308 3.464c-.218-.217-.504-.282-.763-.282z' fill='%23007261'/%3E%3C/svg%3E");
+                                                transform: rotate(180deg);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .time,
+                                .timeMobile {
+                                    font-weight: bold;
+                                }
+
+                                .point {
+                                    background: #000000;
+                                }
+                            }
                         }
                     }
                 }
@@ -775,7 +785,7 @@ html {
                         letter-spacing: 0.03em;
                         text-transform: uppercase;
                         height: 48px;
-                        padding-bottom: 85px;
+                        padding-bottom: 120px;
                     }
 
                     .foto {
@@ -842,8 +852,12 @@ html {
             height: 84px;
             font-family: Affogato, sans-serif;
             text-align: center;
-            padding-left: 24px;
-            padding-right: 24px;
+            padding: 16px 24px;
+
+            @media (max-width: 576px) {
+                height: auto;
+                padding: 20px 24px;
+            }
 
             a {
                 color: #ffffff;

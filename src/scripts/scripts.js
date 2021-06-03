@@ -33,7 +33,7 @@ $(window).on('load', function () {
     })
 
     $('.eventTitle').click(function () {
-        $(this).toggleClass('open')
+        $(this).parent('.eventBlock').parent('.timePoint').toggleClass('open')
         $(this).next('.desc').slideToggle(300)
     })
 
