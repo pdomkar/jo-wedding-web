@@ -38,34 +38,13 @@ html {
             margin-bottom: 1.5rem;
         }
 
-        // .headerNote {
-        //     display: none;
-        //     position: fixed;
-        //     width: 100%;
-        //     background: #000000;
-        //     color: #FFFFFF;
-        //     font-weight: 500;
-        //     z-index: 10;
-
-        //     .spacing {
-        //         padding: 10px;
-        //     }
-        // }
-
-        // @media (max-width: 992px) {
-        //     .headerNote {
-        //         display: none;
-        //     }
-        // }
-
         nav {
             position: fixed;
             width: 100%;
             background: #ffffff;
             z-index: 10;
 
-            &.withHeaderNote {
-                // top: 44px;
+            &.afterScroll {
                 border-bottom: 1px solid rgba(0, 0, 0, 0.25);
             }
 
@@ -463,14 +442,90 @@ html {
                         }
                     }
 
+                    .iframeMap {
+                        width: 100%;
+                        height: 500px;
+                        border: 0;
+                    }
+
                     .wrapper {
                         position: absolute;
                         top: 80px;
-                        width: auto;
+                        right: 10%;
+                        width: 350px;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 22px;
+
+                        @media (min-width: 767px) and (max-width: 992px) {
+                            right: 0;
+                        }
+
+                        @media (min-width: 992px) and (max-width: 1140px) {
+                            right: 5%;
+                        }
+
+                        @media (max-width: 767px) {
+                            width: 100%;
+                            position: relative;
+                            margin: 0 auto;
+                            top: unset;
+                            right: unset;
+                        }
 
                         .mapBox {
                             background: #ffffff;
-                            padding: 30px;
+                            padding: 31px;
+
+                            @media (max-width: 767px) {
+                                width: 100%;
+                                border-top: 1px solid #007261;
+                            }
+
+                            .line {
+                                display: flex;
+                                align-items: center;
+                                margin: 10px 0;
+
+                                &:first-child() {
+                                    margin-top: 0;
+                                }
+
+                                &:last-child() {
+                                    margin-bottom: 0;
+                                }
+
+                                .bold {
+                                    font-weight: bold;
+                                }
+
+                                .icon {
+                                    display: block;
+                                    width: 24px;
+                                    height: 24px;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: contain;
+                                    margin-right: 21px;
+                                    flex-shrink: 0;
+
+                                    &.home {
+                                        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 9.5L12 1l10 8.5V23h-7v-7H9v7H2V9.5z' fill='%23007261'/%3E%3Cpath d='M12.678.209C12.469.104 12.26 0 12.052 0c-.208 0-.417.104-.625.209L1.313 8.974C1.104 9.078 1 9.39 1 9.6v13.46c0 .523.417.94.834.94h7.09a.823.823 0 00.834-.835v-6.261h4.484V23.166c0 .521.417.834.834.834h7.09a.823.823 0 00.834-.835V9.6c0-.209-.104-.522-.313-.626L12.677.209zm8.654 10.017v12H16.014v-6.261a.823.823 0 00-.834-.835H8.924a.823.823 0 00-.834.835v6.261H2.773V10.017l.208-.104L11.739 2.4l.313-.313.313.313 8.758 7.513.209.104v.21z' fill='%23000'/%3E%3C/svg%3E");
+                                    }
+
+                                    &.marker {
+                                        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 4l-6-3-6 3-1.5 5.5 7.5 13 7.5-13L18 4z' fill='%23007261'/%3E%3Ccircle cx='12' cy='8.5' r='2.5' fill='%23fff'/%3E%3Cpath d='M11.946 11.896c2.032 0 3.742-1.67 3.742-3.653 0-1.982-1.71-3.652-3.742-3.652-2.031 0-3.742 1.67-3.742 3.652 0 2.087 1.71 3.653 3.742 3.653zm0-5.53c1.07 0 1.925.834 1.925 1.877 0 1.044-.749 1.983-1.925 1.983-1.176 0-1.924-.835-1.924-1.983 0-1.147.855-1.878 1.924-1.878z' fill='%23000'/%3E%3Cpath d='M4.57 12.209c.64 1.356 1.39 3.026 2.458 4.8 2.032 3.443 4.17 6.47 4.17 6.574a.932.932 0 00.748.417c.321 0 .535-.104.749-.417.214-.313 4.598-6.47 6.736-11.374.748-1.67 1.069-3.026 1.069-3.966A8.107 8.107 0 0018.04 2.4C16.438.835 14.3 0 11.948 0 9.7 0 7.563.835 5.958 2.4A8.107 8.107 0 003.5 8.243c0 .94.32 2.296 1.07 3.966zm7.377-10.435c3.742 0 6.735 2.922 6.735 6.574 0 1.148-.641 3.026-2.138 5.739-1.497 2.817-3.208 5.53-4.17 6.887l-.214.313-.213.313-.214-.313-.214-.417c-.962-1.357-2.673-4.07-4.17-6.887-1.39-2.713-2.138-4.592-2.138-5.74.107-3.547 3.1-6.47 6.736-6.47z' fill='%23000'/%3E%3C/svg%3E");
+                                    }
+
+                                    &.web {
+                                        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' fill='%23007261'/%3E%3Cellipse cx='12' cy='12' rx='4' ry='11' fill='%23007261'/%3E%3Cpath d='M12 0C5.426 0 0 5.426 0 12s5.426 12 12 12 12-5.426 12-12S18.574 0 12 0zm3.757 2.504c3.339 1.357 5.843 4.487 6.365 8.035l.104.626H16.487v-.521c0-2.505-.522-5.114-1.357-7.514l-.417-1.043 1.044.417zm-4.07-.73l.209-.104.208.104c1.044.417 2.4 3.965 2.609 8.765v.522h-5.53v-.522c.313-5.322 1.67-8.348 2.504-8.765zm-9.809 8.765C2.4 6.887 4.8 3.861 8.243 2.504l1.044-.417L8.87 3.13c-.835 2.4-1.357 4.905-1.357 7.513v.522H1.774l.104-.626zm6.365 10.957C4.904 20.139 2.4 17.009 1.878 13.46l-.104-.626H7.513v.521c0 2.505.522 5.114 1.357 7.514l.417 1.043-1.044-.417zm4.07.73l-.209.104-.208-.104c-1.044-.417-2.4-3.965-2.609-8.765v-.522h5.53v.522c-.313 5.322-1.67 8.348-2.504 8.765zm3.548-.73l-1.044.417.418-1.043c.835-2.4 1.356-4.905 1.356-7.514v-.521H22.33l-.104.626c-.626 3.652-3.026 6.678-6.365 8.035z' fill='%23000'/%3E%3C/svg%3E");
+                                    }
+
+                                    &.warning {
+                                        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.5 3L12 2l2.5 1L23 18.5 20.5 22H3l-2-3.5L9.5 3z' fill='%23C1292E'/%3E%3Cpath d='M24 18.3c0-.8-.2-1.5-.6-2.2L16 3.4C15.1 1.9 13.5 1 11.9 1c-.8 0-1.6.2-2.3.6-.7.4-1.3 1-1.7 1.7L.6 16c-.4.7-.6 1.6-.6 2.4 0 1.6.8 3.2 2.4 4.1.7.4 1.5.6 2.3.6h14.6c2.6-.1 4.7-2.2 4.7-4.8zm-2.6 1.3c-.4.8-1.3 1.3-2.2 1.3H4.7c-.9 0-1.7-.5-2.2-1.3-.2-.4-.3-.8-.3-1.3 0-.4.1-.9.3-1.3L9.8 4.4c.5-.8 1.3-1.3 2.2-1.3.4 0 .9.1 1.3.3.4.2.7.5.9.9l7.2 12.6c.2.4.352.793.352 1.293 0 .59-.152 1.007-.352 1.407z' fill='%23000'/%3E%3Cpath d='M11.9 14.4c.7 0 1.2-.5 1.2-1.2V8.7c0-.7-.6-1.2-1.2-1.2-.7 0-1.2.5-1.2 1.2v4.5c0 .6.5 1.2 1.2 1.2zM12 16.2c-.7 0-1.2.5-1.2 1.2s.5 1.2 1.2 1.2 1.2-.5 1.2-1.2c0-.6-.5-1.2-1.2-1.2z' fill='%23000'/%3E%3C/svg%3E");
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -786,7 +841,7 @@ html {
                         letter-spacing: 0.03em;
                         text-transform: uppercase;
                         height: 48px;
-                        padding-bottom: 120px;
+                        margin-bottom: 85px;
                     }
 
                     .foto {

@@ -16,11 +16,9 @@ $(window).on('load', function () {
 
     $(window).scroll(function () {
         if ($(window).scrollTop() > 10) {
-            // $('.headerNote').show()
-            $('nav').addClass('withHeaderNote')
+            $('nav').addClass('afterScroll')
         } else {
-            // $('.headerNote').hide()
-            $('nav').removeClass('withHeaderNote')
+            $('nav').removeClass('afterScroll')
         }
     })
 
